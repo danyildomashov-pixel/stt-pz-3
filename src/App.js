@@ -1,40 +1,13 @@
-import './App.css';
-import {getBooks, getListOfRestEndPoint} from './api/anapioficeandfire'
-import {useState, useEffect} from "react";
+import React from 'react';
 
 function App() {
-    const [list, setList] = useState({});
-    useEffect(() => {
-        getBooks().then(data => {
-            setList(data.entity);
-        })
-    });
-    return (
-        <div className="app">
-            <section className="app-main">
-                <h1>
-                    <a
-                        className="app-link"
-                        href="https://www.anapioficeandfire.com/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Learn An API of Ice And Fire
-                    </a>
-                </h1>
-                <ul className="app-list">
-                    {Object.keys(list).map(key =>
-                        <li className="app-list-item" key={key}><b>{key}</b>:
-                            <a className="app-link"
-                               href={list[key]}
-                               target="_blank"
-                               rel="noopener noreferrer"
-                            > {list[key]}</a>
-                        </li>)}
-                </ul>
-            </section>
-        </div>
-    );
+  return (
+    <div className="App">
+      <h1>Learn An API of Ice And Fire</h1>
+      <p>Welcome to the Westeros database.</p>
+    </div>
+  );
 }
 
+// ЭТО САМАЯ ВАЖНАЯ СТРОКА:
 export default App;
