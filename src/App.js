@@ -9,8 +9,8 @@ function App() {
   );
 }
 
+// second commit with AVZ
 
-
-
+//для перевірки коміта
 // ЭТО САМАЯ ВАЖНАЯ СТРОКА:
 export default App;
